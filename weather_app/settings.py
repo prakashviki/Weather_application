@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*(1z4qua4u76rks1kzxqjo)-k_8r!gn6exy9qs839&3wvzd2qu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['weather-application-ll13.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -119,6 +119,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+import os
+
+PORT = os.getenv("PORT", "8000")
 
 
 # Default primary key field type
