@@ -1,1 +1,0 @@
-web: gunicorn --bind :$PORT weather_app.wsgi
