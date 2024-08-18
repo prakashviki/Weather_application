@@ -14,3 +14,6 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'weather_app.settings')
 
 application = get_wsgi_application()
+
+port = int(os.environ.get("PORT", 8000))
+os.system(f"python manage.py runserver 0.0.0.0:{port}")
